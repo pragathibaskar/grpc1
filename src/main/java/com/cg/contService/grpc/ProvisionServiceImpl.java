@@ -24,7 +24,7 @@ public void creation(request req,StreamObserver<response> res) {
 		
 		response.Builder build = response.newBuilder();
 		Date date = new Date(req.getTimestamp());  
-		    SimpleDateFormat formatter = new SimpleDateFormat("MM dd yyyy");  
+		    SimpleDateFormat formatter = new SimpleDateFormat("MMMM dd yyyy");  
 		    String strDate= formatter.format(date);   
 		String codigo = req.getCodigo();
 		String msg = "Provisión creada para el expediente "+codigo+" en el periodo "+strDate;
