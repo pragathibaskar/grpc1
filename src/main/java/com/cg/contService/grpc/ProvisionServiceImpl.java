@@ -40,7 +40,9 @@ public void creation(request req,StreamObserver<response> res) {
 	@CrossOrigin
 	@GetMapping("/grpc")
 	String getMsg() {
-		return message;
+		String msg=message;
+		message = null;
+		return msg;
 	}
 
 }
